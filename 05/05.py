@@ -5,13 +5,10 @@ def get_seat_id(s):
         s = s.replace(k, v)
     return int(s, 2)
 
-def get_seat_ids(lines):
-    return [get_seat_id(s) for s in lines]
-
 def main():
     with open('input.txt', 'r') as f:
         lines = [s.strip() for s in f.readlines()]
-    seat_ids = get_seat_ids(lines)
+    seat_ids = [get_seat_id(s) for s in lines]
     print(max(seat_ids))
     seat_ids.sort()
     for i, s_id in enumerate(seat_ids[1:]):
