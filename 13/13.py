@@ -1,5 +1,3 @@
-import numpy as np
-
 def part1(t, fields):
     in_service = [int(f) for f in fields if f != 'x']
 
