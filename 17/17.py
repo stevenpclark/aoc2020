@@ -24,5 +24,5 @@ if __name__ == '__main__':
     grid = np.array(lines, dtype=np.uint8)[:,:,np.newaxis]
     main(grid)
 
-    grid = np.array(lines, dtype=np.uint8)[:,:,np.newaxis, np.newaxis]
+    grid = grid[:,:,:,np.newaxis]
     main(grid, ndim=4)
